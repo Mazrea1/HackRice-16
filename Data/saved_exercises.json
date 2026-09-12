@@ -1,11 +1,26 @@
 [
   {
-    "id": "ex_legs_04",
-    "name": "Dumbbell Walking Lunges",
-    "muscle_group": "Legs",
-    "is_machine": false,
-    "equipment": "Dumbbell",
-    "swap_id": null,
-    "instructions": "Hold dumbbells at sides, step forward into a lunge until back knee nearly touches ground."
+    "id": "ex_chest_03",
+    "name": "Cable Crossover",
+    "muscle_group": "Chest",
+    "is_machine": true,
+    "equipment": "Cable",
+    "swap_id": "ex_chest_04",
+    "instructions": "Stand in the middle of a cable tower, pull handles down and together across your body.",
+    "video_url": "",
+    "start_image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Crossover/0.jpg",
+    "end_image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Crossover/1.jpg"
+  },
+  {
+    "id": "ex_back_05",
+    "name": "Leverage ISO Row Machine",
+    "muscle_group": "Back",
+    "is_machine": true,
+    "equipment": "Machine",
+    "swap_id": "ex_back_06",
+    "instructions": "Place chest against support pad, grip handles, and drive elbows straight back.",
+    "video_url": "",
+    "start_image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Iso_Row/0.jpg",
+    "end_image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Iso_Row/1.jpg"
   }
 ]

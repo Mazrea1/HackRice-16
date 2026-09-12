@@ -105,7 +105,8 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-st.button("Make your routine")
+if st.button("Make your routine"):
+    st.switch_page("pages/Search.py")
 
 st.markdown("<br><br>", unsafe_allow_html=True)
 

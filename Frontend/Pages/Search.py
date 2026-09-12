@@ -9,7 +9,7 @@ import streamlit as st
 
 from Theme import inject_theme
 from Nav import render_top_nav
-from Data_Acess import get_all_exercises
+from Data_Acess import get_all_exercises, save_exercise
 from Exercise_Card import render_exercise_card
 
 st.set_page_config(page_title="ReRack — Search", page_icon="🔍", layout="wide")
@@ -64,5 +64,14 @@ st.markdown(f'<div class="result-count">{count_label}</div>', unsafe_allow_html=
 if not filtered:
     st.info("No exercises match those filters.")
 else:
+    def save_to_routine(exercise_id):
+        _, message = save_exercise(exercise_id, exercises)
+        return message
+
     for exercise in filtered:
-        render_exercise_card(exercise)
+        render_exercise_card(
+            exercise,
+            action_label="Save to routine",
+            action_key=f"save-{exercise['id']}",
+            action_callback=save_to_routine,
+        )

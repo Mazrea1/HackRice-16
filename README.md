@@ -22,4 +22,24 @@ Consists of the main/app file, frontend files, and event listeners etc.
 
 
 
-API List:
+Citations:
+
+Exercise Dataset & Images:
+
+    Source: Free Exercise DB (Maintained by @yuhonas on GitHub)
+
+    License: Public Domain / Unlicense
+
+    URL: [https://github.com/yuhonas/free-exercise-db](https://github.com/yuhonas/free-exercise-db)
+
+Original Anatomical & Movement Illustrations:
+
+    Source: Everkinetic via Wikimedia Commons
+
+    License: Creative Commons Attribution-ShareAlike 3.0 (CC BY-SA 3.0)
+
+Frontend Framework: 
+
+    Source: Streamlit (Snowflake)
+
+    License: Apache License 2.0
