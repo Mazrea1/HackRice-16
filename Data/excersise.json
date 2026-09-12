@@ -1,0 +1,452 @@
+[
+  {
+    "id": "ex_chest_01",
+    "name": "Chest Press Machine",
+    "muscle_group": "Chest",
+    "is_machine": true,
+    "equipment": "Machine",
+    "swap_id": "ex_chest_02",
+    "instructions": "Sit vertically, align handles with mid-chest, and press forward firmly."
+  },
+  {
+    "id": "ex_chest_02",
+    "name": "Dumbbell Bench Press",
+    "muscle_group": "Chest",
+    "is_machine": false,
+    "equipment": "Dumbbell",
+    "swap_id": null,
+    "instructions": "Lie flat on a bench, hold dumbbells at chest level, and press directly upward."
+  },
+  {
+    "id": "ex_chest_03",
+    "name": "Cable Crossover",
+    "muscle_group": "Chest",
+    "is_machine": true,
+    "equipment": "Cable",
+    "swap_id": "ex_chest_04",
+    "instructions": "Stand in the middle of a cable tower, pull handles down and together across your body."
+  },
+  {
+    "id": "ex_chest_04",
+    "name": "Dumbbell Flyes",
+    "muscle_group": "Chest",
+    "is_machine": false,
+    "equipment": "Dumbbell",
+    "swap_id": null,
+    "instructions": "Lie on a flat bench, extend arms upward with soft elbows, and lower out to the sides."
+  },
+  {
+    "id": "ex_chest_05",
+    "name": "Pec Deck Machine",
+    "muscle_group": "Chest",
+    "is_machine": true,
+    "equipment": "Machine",
+    "swap_id": "ex_chest_06",
+    "instructions": "Sit with back flat against pad, place forearms on pads, and bring elbows together in front."
+  },
+  {
+    "id": "ex_chest_06",
+    "name": "Push-Ups",
+    "muscle_group": "Chest",
+    "is_machine": false,
+    "equipment": "Bodyweight",
+    "swap_id": null,
+    "instructions": "Maintain a rigid plank position, lower chest to floor, and push up explosively."
+  },
+  {
+    "id": "ex_chest_07",
+    "name": "Incline Machine Press",
+    "muscle_group": "Chest",
+    "is_machine": true,
+    "equipment": "Machine",
+    "swap_id": "ex_chest_08",
+    "instructions": "Adjust seat for incline angle, grip handles above upper chest, and press upward."
+  },
+  {
+    "id": "ex_chest_08",
+    "name": "Incline Dumbbell Press",
+    "muscle_group": "Chest",
+    "is_machine": false,
+    "equipment": "Dumbbell",
+    "swap_id": null,
+    "instructions": "Set bench to 30 degrees, hold dumbbells at collarbone height, and press straight up."
+  },
+  {
+    "id": "ex_chest_09",
+    "name": "Assisted Dip Machine",
+    "muscle_group": "Chest",
+    "is_machine": true,
+    "equipment": "Machine",
+    "swap_id": "ex_chest_10",
+    "instructions": "Place knees on padded platform, lower body until elbows hit 90 degrees, and push up."
+  },
+  {
+    "id": "ex_chest_10",
+    "name": "Parallel Bar Dips",
+    "muscle_group": "Chest",
+    "is_machine": false,
+    "equipment": "Bodyweight",
+    "swap_id": null,
+    "instructions": "Grip parallel bars, lean torso slightly forward, lower until elbows reach 90 degrees, and drive up."
+  },
+  {
+    "id": "ex_back_01",
+    "name": "Lat Pulldown Machine",
+    "muscle_group": "Back",
+    "is_machine": true,
+    "equipment": "Machine",
+    "swap_id": "ex_back_02",
+    "instructions": "Grip wide bar above head, pull bar down toward upper chest while driving elbows down."
+  },
+  {
+    "id": "ex_back_02",
+    "name": "Pull-Ups",
+    "muscle_group": "Back",
+    "is_machine": false,
+    "equipment": "Bodyweight",
+    "swap_id": null,
+    "instructions": "Grip overhead bar slightly wider than shoulder-width and pull chin over the bar."
+  },
+  {
+    "id": "ex_back_03",
+    "name": "Seated Cable Row",
+    "muscle_group": "Back",
+    "is_machine": true,
+    "equipment": "Cable",
+    "swap_id": "ex_back_04",
+    "instructions": "Sit with knees slightly bent, pull V-bar attachment into lower abdomen, squeezing shoulder blades."
+  },
+  {
+    "id": "ex_back_04",
+    "name": "Single-Arm Dumbbell Row",
+    "muscle_group": "Back",
+    "is_machine": false,
+    "equipment": "Dumbbell",
+    "swap_id": null,
+    "instructions": "Place one knee and hand on bench, pull dumbbell up toward hip with elbow tucked."
+  },
+  {
+    "id": "ex_back_05",
+    "name": "Leverage ISO Row Machine",
+    "muscle_group": "Back",
+    "is_machine": true,
+    "equipment": "Machine",
+    "swap_id": "ex_back_06",
+    "instructions": "Place chest against support pad, grip handles, and drive elbows straight back."
+  },
+  {
+    "id": "ex_back_06",
+    "name": "Bent-Over Dumbbell Row",
+    "muscle_group": "Back",
+    "is_machine": false,
+    "equipment": "Dumbbell",
+    "swap_id": null,
+    "instructions": "Hinge at hips with flat back, hold dumbbells hanging down, and pull toward waist."
+  },
+  {
+    "id": "ex_back_07",
+    "name": "Back Extension Machine",
+    "muscle_group": "Back",
+    "is_machine": true,
+    "equipment": "Machine",
+    "swap_id": "ex_back_08",
+    "instructions": "Adjust leg pads, hinge forward at hips, and contract lower back muscles to extend upright."
+  },
+  {
+    "id": "ex_back_08",
+    "name": "Bodyweight Hyperextensions",
+    "muscle_group": "Back",
+    "is_machine": false,
+    "equipment": "Bodyweight",
+    "swap_id": null,
+    "instructions": "Lock feet on hyperextension bench, lower torso to 90 degrees, and raise back to parallel."
+  },
+  {
+    "id": "ex_back_09",
+    "name": "Assisted Pull-Up Machine",
+    "muscle_group": "Back",
+    "is_machine": true,
+    "equipment": "Machine",
+    "swap_id": "ex_back_10",
+    "instructions": "Place knees on pad, grip handles wide, and let machine counterweight assist your pull-up."
+  },
+  {
+    "id": "ex_back_10",
+    "name": "Inverted Bodyweight Row",
+    "muscle_group": "Back",
+    "is_machine": false,
+    "equipment": "Bodyweight",
+    "swap_id": null,
+    "instructions": "Lie under a fixed bar, hang with arms straight, and pull chest up to the bar."
+  },
+  {
+    "id": "ex_legs_01",
+    "name": "Leg Press Machine",
+    "muscle_group": "Legs",
+    "is_machine": true,
+    "equipment": "Machine",
+    "swap_id": "ex_legs_02",
+    "instructions": "Place feet shoulder-width on platform, release safety catch, lower weight to 90 degrees, and drive up."
+  },
+  {
+    "id": "ex_legs_02",
+    "name": "Goblet Squat",
+    "muscle_group": "Legs",
+    "is_machine": false,
+    "equipment": "Dumbbell",
+    "swap_id": null,
+    "instructions": "Hold a dumbbell vertically against chest, squat deep keeping chest upright, and stand."
+  },
+  {
+    "id": "ex_legs_03",
+    "name": "Seated Leg Extension Machine",
+    "muscle_group": "Legs",
+    "is_machine": true,
+    "equipment": "Machine",
+    "swap_id": "ex_legs_04",
+    "instructions": "Place lower shins under pad, extend legs straight out until quad contracts completely."
+  },
+  {
+    "id": "ex_legs_04",
+    "name": "Dumbbell Walking Lunges",
+    "muscle_group": "Legs",
+    "is_machine": false,
+    "equipment": "Dumbbell",
+    "swap_id": null,
+    "instructions": "Hold dumbbells at sides, step forward into a lunge until back knee nearly touches ground."
+  },
+  {
+    "id": "ex_legs_05",
+    "name": "Lying Leg Curl Machine",
+    "muscle_group": "Legs",
+    "is_machine": true,
+    "equipment": "Machine",
+    "swap_id": "ex_legs_06",
+    "instructions": "Lie prone with lower calves under pad, flex hamstrings to curl pad toward glutes."
+  },
+  {
+    "id": "ex_legs_06",
+    "name": "Dumbbell Romanian Deadlift",
+    "muscle_group": "Legs",
+    "is_machine": false,
+    "equipment": "Dumbbell",
+    "swap_id": null,
+    "instructions": "Hold dumbbells in front of thighs, hinge hips back with flat spine until stretch in hamstrings."
+  },
+  {
+    "id": "ex_legs_07",
+    "name": "Hack Squat Machine",
+    "muscle_group": "Legs",
+    "is_machine": true,
+    "equipment": "Machine",
+    "swap_id": "ex_legs_08",
+    "instructions": "Position shoulders under pads, unlock weight, squat down to parallel, and press back up."
+  },
+  {
+    "id": "ex_legs_08",
+    "name": "Dumbbell Bulgarian Split Squat",
+    "muscle_group": "Legs",
+    "is_machine": false,
+    "equipment": "Dumbbell",
+    "swap_id": null,
+    "instructions": "Place rear foot on bench, hold dumbbells at sides, lower back knee toward floor, and drive up."
+  },
+  {
+    "id": "ex_legs_09",
+    "name": "Seated Calf Raise Machine",
+    "muscle_group": "Legs",
+    "is_machine": true,
+    "equipment": "Machine",
+    "swap_id": "ex_legs_10",
+    "instructions": "Place lower thighs under pad, drop heels toward floor, then extend ankles upward high."
+  },
+  {
+    "id": "ex_legs_10",
+    "name": "Standing Dumbbell Calf Raise",
+    "muscle_group": "Legs",
+    "is_machine": false,
+    "equipment": "Dumbbell",
+    "swap_id": null,
+    "instructions": "Hold dumbbells at sides, balance on ball of feet on a step, lower heels, and rise high on toes."
+  },
+  {
+    "id": "ex_shoulders_01",
+    "name": "Seated Overhead Shoulder Press Machine",
+    "muscle_group": "Shoulders",
+    "is_machine": true,
+    "equipment": "Machine",
+    "swap_id": "ex_shoulders_02",
+    "instructions": "Sit with back firmly supported, grip handles at ear level, and press straight up overhead."
+  },
+  {
+    "id": "ex_shoulders_02",
+    "name": "Seated Dumbbell Shoulder Press",
+    "muscle_group": "Shoulders",
+    "is_machine": false,
+    "equipment": "Dumbbell",
+    "swap_id": null,
+    "instructions": "Sit on upright bench, bring dumbbells to shoulder height, and press vertically overhead."
+  },
+  {
+    "id": "ex_shoulders_03",
+    "name": "Cable Lateral Raise",
+    "muscle_group": "Shoulders",
+    "is_machine": true,
+    "equipment": "Cable",
+    "swap_id": "ex_shoulders_04",
+    "instructions": "Attach low pulley handle, pull cable across body and out to the side until arm is parallel to floor."
+  },
+  {
+    "id": "ex_shoulders_04",
+    "name": "Dumbbell Lateral Raise",
+    "muscle_group": "Shoulders",
+    "is_machine": false,
+    "equipment": "Dumbbell",
+    "swap_id": null,
+    "instructions": "Stand upright holding dumbbells at sides, raise arms outward to 90 degrees keeping slight elbow bend."
+  },
+  {
+    "id": "ex_shoulders_05",
+    "name": "Reverse Pec Deck Machine",
+    "muscle_group": "Shoulders",
+    "is_machine": true,
+    "equipment": "Machine",
+    "swap_id": "ex_shoulders_06",
+    "instructions": "Face inside the machine, grip handles at chest height, and sweep arms back to hit rear delts."
+  },
+  {
+    "id": "ex_shoulders_06",
+    "name": "Dumbbell Rear Delt Flyes",
+    "muscle_group": "Shoulders",
+    "is_machine": false,
+    "equipment": "Dumbbell",
+    "swap_id": null,
+    "instructions": "Hinge forward at waist with flat back, hold dumbbells below chest, and raise outward."
+  },
+  {
+    "id": "ex_shoulders_07",
+    "name": "Smith Machine Shoulder Press",
+    "muscle_group": "Shoulders",
+    "is_machine": true,
+    "equipment": "Machine",
+    "swap_id": "ex_shoulders_08",
+    "instructions": "Position bench under bar, unhook safety latches at shoulder height, and press bar straight up."
+  },
+  {
+    "id": "ex_shoulders_08",
+    "name": "Dumbbell Arnold Press",
+    "muscle_group": "Shoulders",
+    "is_machine": false,
+    "equipment": "Dumbbell",
+    "swap_id": null,
+    "instructions": "Hold dumbbells at chest with palms facing you, rotate palms forward as you press upward."
+  },
+  {
+    "id": "ex_shoulders_09",
+    "name": "Cable Front Raise",
+    "muscle_group": "Shoulders",
+    "is_machine": true,
+    "equipment": "Cable",
+    "swap_id": "ex_shoulders_10",
+    "instructions": "Grip low pulley handle between legs, raise arm straight in front to shoulder height, and lower down."
+  },
+  {
+    "id": "ex_shoulders_10",
+    "name": "Dumbbell Front Raise",
+    "muscle_group": "Shoulders",
+    "is_machine": false,
+    "equipment": "Dumbbell",
+    "swap_id": null,
+    "instructions": "Hold dumbbells on front thighs, lift one arm straight out in front to eye level, and alternate."
+  },
+  {
+    "id": "ex_arms_01",
+    "name": "Cable Triceps Pushdown",
+    "muscle_group": "Arms",
+    "is_machine": true,
+    "equipment": "Cable",
+    "swap_id": "ex_arms_02",
+    "instructions": "Attach rope or bar to high cable, keep elbows pinned at sides, and push attachment straight down."
+  },
+  {
+    "id": "ex_arms_02",
+    "name": "Dumbbell Overhead Triceps Extension",
+    "muscle_group": "Arms",
+    "is_machine": false,
+    "equipment": "Dumbbell",
+    "swap_id": null,
+    "instructions": "Hold dumbbell with both hands overhead, lower behind head by flexing elbows, and press up."
+  },
+  {
+    "id": "ex_arms_03",
+    "name": "Machine Biceps Curl",
+    "muscle_group": "Arms",
+    "is_machine": true,
+    "equipment": "Machine",
+    "swap_id": "ex_arms_04",
+    "instructions": "Rest upper arms on preacher pad, grip handles, and flex biceps to curl weight up."
+  },
+  {
+    "id": "ex_arms_04",
+    "name": "Standing Dumbbell Biceps Curl",
+    "muscle_group": "Arms",
+    "is_machine": false,
+    "equipment": "Dumbbell",
+    "swap_id": null,
+    "instructions": "Hold dumbbells with arms fully extended, rotate palms up, and curl toward shoulders."
+  },
+  {
+    "id": "ex_arms_05",
+    "name": "Cable Preacher Curl Machine",
+    "muscle_group": "Arms",
+    "is_machine": true,
+    "equipment": "Cable",
+    "swap_id": "ex_arms_06",
+    "instructions": "Position arms on angled pad, pull low cable bar upward while isolating biceps."
+  },
+  {
+    "id": "ex_arms_06",
+    "name": "Dumbbell Hammer Curl",
+    "muscle_group": "Arms",
+    "is_machine": false,
+    "equipment": "Dumbbell",
+    "swap_id": null,
+    "instructions": "Hold dumbbells with neutral grip (palms facing each other) and curl weight straight up."
+  },
+  {
+    "id": "ex_arms_07",
+    "name": "Seated Dip Machine",
+    "muscle_group": "Arms",
+    "is_machine": true,
+    "equipment": "Machine",
+    "swap_id": "ex_arms_08",
+    "instructions": "Grip handles at hip level, press down extending elbows completely, and return slowly."
+  },
+  {
+    "id": "ex_arms_08",
+    "name": "Dumbbell Triceps Kickbacks",
+    "muscle_group": "Arms",
+    "is_machine": false,
+    "equipment": "Dumbbell",
+    "swap_id": null,
+    "instructions": "Hinge torso parallel to floor, pin upper arm at side, and extend dumbbell straight back."
+  },
+  {
+    "id": "ex_arms_09",
+    "name": "Cable Overhead Rope Extension",
+    "muscle_group": "Arms",
+    "is_machine": true,
+    "equipment": "Cable",
+    "swap_id": "ex_arms_10",
+    "instructions": "Attach rope to high pulley, face away from stack, press rope forward overhead extending triceps."
+  },
+  {
+    "id": "ex_arms_10",
+    "name": "Bodyweight Bench Dips",
+    "muscle_group": "Arms",
+    "is_machine": false,
+    "equipment": "Bodyweight",
+    "swap_id": null,
+    "instructions": "Place hands on bench behind hips, extend legs forward, lower hips toward floor, and push up."
+  }
+]
