@@ -18,6 +18,7 @@ if _BACKEND_DIR not in sys.path:
 
 from logic import (  # noqa: E402
     add_saved_exercise,
+    build_workout_plan,
     delete_saved_exercise,
     load_exercises,
     load_saved_exercises,
@@ -47,3 +48,8 @@ def save_exercise(exercise_id, exercises):
 def remove_saved_exercise(exercise_id):
     """Remove one exercise from the user's routine."""
     return delete_saved_exercise(exercise_id)
+
+
+def generate_workout_plan(num_days, exercises):
+    """Build a workout plan from the saved exercises and full catalog."""
+    return build_workout_plan(num_days, exercises)
