@@ -1,0 +1,11 @@
+[
+  {
+    "id": "ex_legs_04",
+    "name": "Dumbbell Walking Lunges",
+    "muscle_group": "Legs",
+    "is_machine": false,
+    "equipment": "Dumbbell",
+    "swap_id": null,
+    "instructions": "Hold dumbbells at sides, step forward into a lunge until back knee nearly touches ground."
+  }
+]
