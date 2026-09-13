@@ -5,6 +5,7 @@ import streamlit as st
 from Theme import inject_theme
 from Nav import render_top_nav
 from Data_Acess import (
+    find_replacement,
     generate_workout_plan,
     get_all_exercises,
     get_saved_exercises,
@@ -20,6 +21,7 @@ render_top_nav("Routine")
 st.markdown('<div class="page-title">Your Routine</div>', unsafe_allow_html=True)
 
 saved_exercises = get_saved_exercises()
+all_exercises = get_all_exercises()
 
 st.markdown("### Build a workout plan")
 num_days = st.radio(
@@ -54,8 +56,16 @@ with st.expander("Saved Workouts", expanded=False):
             f"{len(saved_exercises)} saved exercise"
             f"{'s' if len(saved_exercises) != 1 else ''}"
         )
+
+        def find_exercise_replacement(exercise_id):
+            return find_replacement(exercise_id, all_exercises)
+
         for exercise in saved_exercises:
-            render_exercise_card(exercise, expandable=False)
+            render_exercise_card(
+                exercise,
+                replacement_callback=find_exercise_replacement,
+                expandable=False,
+            )
             if st.button("Remove from routine", key=f"remove-{exercise['id']}"):
                 _, message = remove_saved_exercise(exercise["id"])
                 st.success(message)

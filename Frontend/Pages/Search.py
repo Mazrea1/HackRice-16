@@ -9,7 +9,7 @@ import streamlit as st
 
 from Theme import inject_theme
 from Nav import render_top_nav
-from Data_Acess import get_all_exercises, save_exercise
+from Data_Acess import find_replacement, get_all_exercises, save_exercise
 from Exercise_Card import render_exercise_card
 
 st.set_page_config(page_title="ReRack — Search", page_icon="🔍", layout="wide")
@@ -68,10 +68,14 @@ else:
         _, message = save_exercise(exercise_id, exercises)
         return message
 
+    def find_exercise_replacement(exercise_id):
+        return find_replacement(exercise_id, exercises)
+
     for exercise in filtered:
         render_exercise_card(
             exercise,
             action_label="Save to routine",
             action_key=f"save-{exercise['id']}",
             action_callback=save_to_routine,
+            replacement_callback=find_exercise_replacement,
         )

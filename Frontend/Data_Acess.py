@@ -20,6 +20,7 @@ from logic import (  # noqa: E402
     add_saved_exercise,
     build_workout_plan,
     delete_saved_exercise,
+    get_alternative_exercise,
     load_exercises,
     load_saved_exercises,
 )
@@ -53,3 +54,8 @@ def remove_saved_exercise(exercise_id):
 def generate_workout_plan(num_days, exercises):
     """Build a workout plan from the saved exercises and full catalog."""
     return build_workout_plan(num_days, exercises)
+
+
+def find_replacement(exercise_id, exercises):
+    """Find the opposite equipment-type alternative for an exercise."""
+    return get_alternative_exercise(exercise_id, exercises)

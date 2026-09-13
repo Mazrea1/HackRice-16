@@ -15,7 +15,7 @@ else about the card needs to change.
 """
 
 from io import BytesIO
-from typing import Any, Callable, Dict
+from typing import Any, Callable, Dict, Optional, Tuple
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
@@ -93,6 +93,9 @@ def render_exercise_card(
     action_label: str | None = None,
     action_key: str | None = None,
     action_callback: Callable[[str], str] | None = None,
+    replacement_callback: Callable[
+        [str], Tuple[Optional[Dict[str, Any]], str]
+    ] | None = None,
     expandable: bool = True,
 ) -> None:
     """
@@ -109,6 +112,24 @@ def render_exercise_card(
         if action_label and action_key and action_callback:
             if st.button(action_label, key=action_key):
                 st.success(action_callback(exercise["id"]))
+
+        if replacement_callback:
+            replacement_key = f"replacement-{exercise['id']}"
+            if st.button("Find replacement", key=f"find-{exercise['id']}"):
+                st.session_state[replacement_key] = replacement_callback(exercise["id"])
+
+            if replacement_key in st.session_state:
+                replacement, message = st.session_state[replacement_key]
+                if replacement is None:
+                    st.info(message)
+                else:
+                    st.success(message)
+                    st.markdown(
+                        f"**Replacement: {replacement.get('name', 'Unnamed exercise')}**"
+                    )
+                    _render_description(replacement)
+                    _render_images(replacement)
+                    _render_video(replacement)
 
     if expandable:
         with st.expander(label):

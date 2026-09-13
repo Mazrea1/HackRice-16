@@ -33,60 +33,65 @@ def find_exercise_by_id(
     return None
 
 
-def find_non_machine_alternative(
+def find_alternative_by_type(
     muscle_group: str,
     exclude_id: str,
-    exercises: List[Dict[str, Any]]
+    exercises: List[Dict[str, Any]],
+    want_machine: bool
 ) -> Optional[Dict[str, Any]]:
-    """Fallback: first non-machine exercise for the same muscle group."""
+    """Fallback: first exercise of the given type (machine or not) for the same muscle group."""
     for candidate in exercises:
         if (
             candidate.get("id") != exclude_id
-            and candidate.get("is_machine") is False
+            and candidate.get("is_machine") is want_machine
             and candidate.get("muscle_group") == muscle_group
         ):
             return candidate
     return None
 
 
-def get_machine_swap(
+def find_reverse_swap(exercise_id: str, exercises: List[Dict[str, Any]]) -> Optional[Dict[str, Any]]:
+    """Find a machine exercise whose swap_id points back to exercise_id."""
+    for candidate in exercises:
+        if candidate.get("is_machine") and candidate.get("swap_id") == exercise_id:
+            return candidate
+    return None
+
+
+def get_alternative_exercise(
     exercise_id: str,
     exercises: List[Dict[str, Any]]
 ) -> Tuple[Optional[Dict[str, Any]], str]:
     """
-    Swap a machine exercise for a free-weight/bodyweight alternative.
-    Uses swap_id if set, else falls back to same muscle_group.
-    Returns (swap_exercise, message).
+    Suggest an alternative for any exercise: a machine gets a free-weight/
+    bodyweight swap, a free-weight/bodyweight exercise gets a machine
+    option -- so there's always another option if someone doesn't like
+    the one they're looking at.
+    Returns (alternative_exercise, message).
     """
     exercise = find_exercise_by_id(exercise_id, exercises)
     if exercise is None:
         return None, f"No exercise found with id '{exercise_id}'."
 
-    if not exercise.get("is_machine"):
-        return None, f"'{exercise['name']}' is not a machine; no swap needed."
-
-    swap_id = exercise.get("swap_id")
+    is_machine = exercise.get("is_machine")
     muscle_group = exercise.get("muscle_group")
+    want_machine = not is_machine
 
-    if swap_id:
-        swap_exercise = find_exercise_by_id(swap_id, exercises)
-        if swap_exercise is not None:
-            return swap_exercise, (
-                f"Swapped '{exercise['name']}' for '{swap_exercise['name']}' "
-                f"(direct swap)."
-            )
+    if is_machine and exercise.get("swap_id"):
+        direct = find_exercise_by_id(exercise["swap_id"], exercises)
+        if direct is not None:
+            return direct, f"Swapped '{exercise['name']}' for '{direct['name']}' (direct swap)."
 
-    alternative = find_non_machine_alternative(muscle_group, exercise_id, exercises)
+    if not is_machine:
+        reverse = find_reverse_swap(exercise_id, exercises)
+        if reverse is not None:
+            return reverse, f"Swapped '{exercise['name']}' for '{reverse['name']}' (machine option)."
+
+    alternative = find_alternative_by_type(muscle_group, exercise_id, exercises, want_machine)
     if alternative is not None:
-        return alternative, (
-            f"'{exercise['name']}' had no direct swap set; found "
-            f"'{alternative['name']}' as a {muscle_group.lower()} alternative."
-        )
+        return alternative, f"Found '{alternative['name']}' as an alternative to '{exercise['name']}'."
 
-    return None, (
-        f"No swap available for '{exercise['name']}' -- no swap_id set and "
-        f"no non-machine exercise found for muscle group '{muscle_group}'."
-    )
+    return None, f"No alternative found for '{exercise['name']}'."
 
 
 def load_saved_exercises(filepath: str = DEFAULT_SAVED_EXERCISES_PATH) -> List[Dict[str, Any]]:
