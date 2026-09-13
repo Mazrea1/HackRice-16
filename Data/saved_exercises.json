@@ -1,15 +1,15 @@
 [
   {
-    "id": "ex_chest_02",
-    "name": "Dumbbell Bench Press",
-    "muscle_group": "Chest",
-    "is_machine": false,
-    "equipment": "Dumbbell",
-    "swap_id": null,
-    "instructions": "Lie flat on a bench, hold dumbbells at chest level, and press directly upward.",
+    "id": "ex_back_01",
+    "name": "Lat Pulldown Machine",
+    "muscle_group": "Back",
+    "is_machine": true,
+    "equipment": "Machine",
+    "swap_id": "ex_back_02",
+    "instructions": "Grip wide bar above head, pull bar down toward upper chest while driving elbows down.",
     "video_url": "",
-    "start_image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Bench_Press/0.jpg",
-    "end_image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Bench_Press/1.jpg"
+    "start_image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Wide-Grip_Lat_Pulldown/0.jpg",
+    "end_image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Wide-Grip_Lat_Pulldown/1.jpg"
   },
   {
     "id": "ex_back_03",
@@ -24,63 +24,15 @@
     "end_image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Cable_Rows/1.jpg"
   },
   {
-    "id": "ex_back_07",
-    "name": "Back Extension Machine",
-    "muscle_group": "Back",
+    "id": "ex_legs_07",
+    "name": "Hack Squat Machine",
+    "muscle_group": "Legs",
     "is_machine": true,
     "equipment": "Machine",
-    "swap_id": "ex_back_08",
-    "instructions": "Adjust leg pads, hinge forward at hips, and contract lower back muscles to extend upright.",
+    "swap_id": "ex_legs_08",
+    "instructions": "Position shoulders under pads, unlock weight, squat down to parallel, and press back up.",
     "video_url": "",
-    "start_image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hyperextensions_Back_Extensions/0.jpg",
-    "end_image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hyperextensions_Back_Extensions/1.jpg"
-  },
-  {
-    "id": "ex_back_09",
-    "name": "Assisted Pull-Up Machine",
-    "muscle_group": "Back",
-    "is_machine": true,
-    "equipment": "Machine",
-    "swap_id": "ex_back_10",
-    "instructions": "Place knees on pad, grip handles wide, and let machine counterweight assist your pull-up.",
-    "video_url": "",
-    "start_image_url": "N/A",
-    "end_image_url": "N/A"
-  },
-  {
-    "id": "ex_shoulders_01",
-    "name": "Seated Overhead Shoulder Press Machine",
-    "muscle_group": "Shoulders",
-    "is_machine": true,
-    "equipment": "Machine",
-    "swap_id": "ex_shoulders_02",
-    "instructions": "Sit with back firmly supported, grip handles at ear level, and press straight up overhead.",
-    "video_url": "",
-    "start_image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Shoulder_Press/0.jpg",
-    "end_image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Shoulder_Press/1.jpg"
-  },
-  {
-    "id": "ex_shoulders_02",
-    "name": "Seated Dumbbell Shoulder Press",
-    "muscle_group": "Shoulders",
-    "is_machine": false,
-    "equipment": "Dumbbell",
-    "swap_id": null,
-    "instructions": "Sit on upright bench, bring dumbbells to shoulder height, and press vertically overhead.",
-    "video_url": "",
-    "start_image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Dumbbell_Press/0.jpg",
-    "end_image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Dumbbell_Press/1.jpg"
-  },
-  {
-    "id": "ex_arms_03",
-    "name": "Machine Biceps Curl",
-    "muscle_group": "Arms",
-    "is_machine": true,
-    "equipment": "Machine",
-    "swap_id": "ex_arms_04",
-    "instructions": "Rest upper arms on preacher pad, grip handles, and flex biceps to curl weight up.",
-    "video_url": "",
-    "start_image_url": "N/A",
-    "end_image_url": "N/A"
+    "start_image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hack_Squat/0.jpg",
+    "end_image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hack_Squat/1.jpg"
   }
 ]
