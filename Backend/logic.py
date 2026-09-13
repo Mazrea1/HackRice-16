@@ -160,14 +160,44 @@ def find_exercises_by_muscle_groups(
     return [ex for ex in exercises if ex.get("muscle_group") in muscle_groups]
 
 
+def select_muscle_group_exercises(
+    muscle_group: str,
+    saved_exercises: List[Dict[str, Any]],
+    exercises: List[Dict[str, Any]],
+    min_count: int = 2,
+    max_count: int = 4
+) -> Tuple[List[Dict[str, Any]], bool]:
+    """
+    Pick 2-4 exercises for one muscle group, preferring saved ones and
+    topping up from the full catalog if under the minimum.
+    Returns (exercises, was_topped_up).
+    """
+    picked = find_exercises_by_muscle_groups([muscle_group], saved_exercises)
+    was_topped_up = False
+
+    if len(picked) < min_count:
+        picked_ids = {ex["id"] for ex in picked}
+        for candidate in find_exercises_by_muscle_groups([muscle_group], exercises):
+            if len(picked) >= min_count:
+                break
+            if candidate["id"] not in picked_ids:
+                picked.append(candidate)
+                picked_ids.add(candidate["id"])
+                was_topped_up = True
+
+    return picked[:max_count], was_topped_up
+
+
 def build_workout_plan(
     num_days: int,
     exercises: List[Dict[str, Any]],
     saved_filepath: str = DEFAULT_SAVED_EXERCISES_PATH
 ) -> Tuple[List[Dict[str, Any]], str]:
     """
-    Build a workout plan (3 or 5 days) from saved exercises. Empty days
-    get one exercise autofilled from the full catalog.
+    Build a workout plan (3 or 5 days) from saved exercises. Each muscle
+    group gets 2-4 exercises for the whole week, topped up from the full
+    catalog if needed -- picked once per muscle group, then placed on
+    whichever day(s) train it.
     Returns (plan, message) where plan is a list of
     {"day": int, "muscle_groups": [...], "exercises": [...]}.
     """
@@ -177,31 +207,37 @@ def build_workout_plan(
     saved_exercises = load_saved_exercises(saved_filepath)
     template = WORKOUT_PLAN_TEMPLATES[num_days]
 
+    # Pick each muscle group's 2-4 exercises once for the whole week.
+    all_muscle_groups = sorted({mg for day in template for mg in day})
+    weekly_picks: Dict[str, List[Dict[str, Any]]] = {}
+    topped_up_groups: List[str] = []
+
+    for muscle_group in all_muscle_groups:
+        picked, was_topped_up = select_muscle_group_exercises(
+            muscle_group, saved_exercises, exercises
+        )
+        weekly_picks[muscle_group] = picked
+        if was_topped_up:
+            topped_up_groups.append(muscle_group)
+
+    # Assign each day its muscle groups' exercises from the weekly picks.
     plan: List[Dict[str, Any]] = []
-    filled_in_days: List[int] = []
-
     for day_number, muscle_groups in enumerate(template, start=1):
-        day_exercises = find_exercises_by_muscle_groups(muscle_groups, saved_exercises)
-
-        if not day_exercises:
-            catalog_matches = find_exercises_by_muscle_groups(muscle_groups, exercises)
-            if catalog_matches:
-                day_exercises = [catalog_matches[0]]
-                filled_in_days.append(day_number)
-
+        day_exercises = [
+            ex for muscle_group in muscle_groups for ex in weekly_picks[muscle_group]
+        ]
         plan.append({
             "day": day_number,
             "muscle_groups": muscle_groups,
             "exercises": day_exercises,
         })
 
-    if filled_in_days:
+    if topped_up_groups:
         message = (
-            f"Built a {num_days}-day plan. Day(s) {filled_in_days} had no "
-            f"saved exercise for their muscle group, so one was pulled in "
-            f"from the full catalog automatically."
+            f"Built a {num_days}-day plan (2-4 exercises per muscle group "
+            f"per week). Topped up from the catalog for: {', '.join(topped_up_groups)}."
         )
     else:
-        message = f"Built a {num_days}-day plan from your saved exercises."
+        message = f"Built a {num_days}-day plan (2-4 exercises per muscle group per week) from your saved exercises."
 
     return plan, message

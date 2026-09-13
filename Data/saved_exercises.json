@@ -1,53 +1,5 @@
 [
   {
-    "id": "ex_chest_03",
-    "name": "Cable Crossover",
-    "muscle_group": "Chest",
-    "is_machine": true,
-    "equipment": "Cable",
-    "swap_id": "ex_chest_04",
-    "instructions": "Stand in the middle of a cable tower, pull handles down and together across your body.",
-    "video_url": "",
-    "start_image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Crossover/0.jpg",
-    "end_image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Crossover/1.jpg"
-  },
-  {
-    "id": "ex_back_05",
-    "name": "Leverage ISO Row Machine",
-    "muscle_group": "Back",
-    "is_machine": true,
-    "equipment": "Machine",
-    "swap_id": "ex_back_06",
-    "instructions": "Place chest against support pad, grip handles, and drive elbows straight back.",
-    "video_url": "",
-    "start_image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Iso_Row/0.jpg",
-    "end_image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Iso_Row/1.jpg"
-  },
-  {
-    "id": "ex_chest_01",
-    "name": "Chest Press Machine",
-    "muscle_group": "Chest",
-    "is_machine": true,
-    "equipment": "Machine",
-    "swap_id": "ex_chest_02",
-    "instructions": "Sit vertically, align handles with mid-chest, and press forward firmly.",
-    "video_url": "",
-    "start_image_url": "N/A",
-    "end_image_url": "N/A"
-  },
-  {
-    "id": "ex_chest_04",
-    "name": "Dumbbell Flyes",
-    "muscle_group": "Chest",
-    "is_machine": false,
-    "equipment": "Dumbbell",
-    "swap_id": null,
-    "instructions": "Lie on a flat bench, extend arms upward with soft elbows, and lower out to the sides.",
-    "video_url": "",
-    "start_image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Flyes/0.jpg",
-    "end_image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Flyes/1.jpg"
-  },
-  {
     "id": "ex_chest_02",
     "name": "Dumbbell Bench Press",
     "muscle_group": "Chest",
